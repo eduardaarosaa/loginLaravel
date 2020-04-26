@@ -11,8 +11,8 @@ use Kreait\Firebase\Database;
 class FirebaseController extends Controller
 {
     public function index(){
-        
-       
+
+
         $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'/firebaseKey.json');
         $firebase = (new Factory)
         ->withServiceAccount($serviceAccount)
@@ -23,7 +23,7 @@ class FirebaseController extends Controller
         ->getReference('sistema/usuarios')
         ->push([
         'nome' => 'Eduarda Rosa',
-        'idade' => '21',
+        'idade' => '21 ',
         'e-mail' => 'eduardacirina@gmail.com',
         'endereco' => 'Rua das rosas',
         ]);
